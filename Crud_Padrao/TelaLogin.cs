@@ -17,9 +17,12 @@ namespace Crud_Padrao
         string usuario;
         string senha;
         string senhacrip;
+        static Form1 f1 = new Form1();
+        int voltar = 1;
 
         static string conexao = "Server=127.0.0.1;Port=3307;Database=Natal;Uid=root;Pwd='' ;"; // trocar a porta de 3307 para 3306 no senai
 
+        TelaPrincipal principal = new TelaPrincipal();
 
         public TelaLogin()
         {
@@ -44,7 +47,7 @@ namespace Crud_Padrao
                 foreach (byte b in bytes)
 
                     sb.Append(b.ToString("x2"));
-                    senhacrip = sb.ToString();
+                senhacrip = sb.ToString();
             }
         }
 
@@ -52,7 +55,9 @@ namespace Crud_Padrao
         {
             if (ValidarLogin(usuario, senhacrip) == 1)
             {
+                voltar = 0;
                 this.Close();
+                principal.Show();
             }
             else
             {
@@ -77,6 +82,14 @@ namespace Crud_Padrao
                     conn.Close();
                     return count;
                 }
+            }
+        }
+
+        private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(voltar == 1)
+            {
+                f1.Show();
             }
         }
     }

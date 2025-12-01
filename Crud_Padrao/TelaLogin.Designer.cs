@@ -101,6 +101,7 @@
             Controls.Add(label1);
             Name = "TelaLogin";
             Text = "TelaLogin";
+            FormClosing += TelaLogin_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
