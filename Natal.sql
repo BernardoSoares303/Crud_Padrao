@@ -14,7 +14,7 @@ create table crianca (
     idade varchar (45),
 	genero char,
     bomzinho bool,
-    constraint chk_genero check(genero in ('F','M','OUTRO'))
+    constraint chk_genero check(genero in ('F','M','O'))
 );
 
 select * from usuarios;
