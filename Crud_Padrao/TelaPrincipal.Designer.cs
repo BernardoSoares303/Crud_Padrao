@@ -45,6 +45,7 @@
             Adicionar_Crianca.TabIndex = 0;
             Adicionar_Crianca.Text = "Cadastrar Criança";
             Adicionar_Crianca.UseVisualStyleBackColor = false;
+            Adicionar_Crianca.Click += Adicionar_Crianca_Click;
             // 
             // Editar_Crianca
             // 
@@ -56,6 +57,7 @@
             Editar_Crianca.TabIndex = 1;
             Editar_Crianca.Text = "Editar Crianças Cadastradas";
             Editar_Crianca.UseVisualStyleBackColor = false;
+            Editar_Crianca.Click += Editar_Crianca_Click;
             // 
             // Ver_Crianca
             // 
@@ -67,6 +69,7 @@
             Ver_Crianca.TabIndex = 2;
             Ver_Crianca.Text = "Ver Crianças Cadastradas";
             Ver_Crianca.UseVisualStyleBackColor = false;
+            Ver_Crianca.Click += Ver_Crianca_Click;
             // 
             // pictureBox1
             // 

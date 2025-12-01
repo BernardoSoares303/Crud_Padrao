@@ -59,7 +59,7 @@
             // 
             Usuario_Text.BackColor = Color.FromArgb(228, 30, 24);
             Usuario_Text.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Usuario_Text.Location = new Point(289, 80);
+            Usuario_Text.Location = new Point(318, 77);
             Usuario_Text.Name = "Usuario_Text";
             Usuario_Text.Size = new Size(310, 47);
             Usuario_Text.TabIndex = 2;

@@ -26,5 +26,22 @@ namespace Crud_Padrao
         {
             Application.Exit();
         }
+
+        private void Adicionar_Crianca_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CadastrarCrianca cc = new CadastrarCrianca();
+            cc.Show();
+        }
+
+        private void Editar_Crianca_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ver_Crianca_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
