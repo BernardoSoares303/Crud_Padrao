@@ -38,53 +38,55 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Vladimir Script", 26F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold);
             label1.Location = new Point(157, 80);
             label1.Name = "label1";
-            label1.Size = new Size(126, 42);
+            label1.Size = new Size(155, 39);
             label1.TabIndex = 0;
             label1.Text = "Usuario:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Vladimir Script", 26F, FontStyle.Bold);
+            label2.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold);
             label2.Location = new Point(157, 177);
             label2.Name = "label2";
-            label2.Size = new Size(114, 42);
+            label2.Size = new Size(142, 39);
             label2.TabIndex = 1;
             label2.Text = "Senha: ";
             // 
             // Usuario_Text
             // 
             Usuario_Text.BackColor = Color.FromArgb(228, 30, 24);
-            Usuario_Text.Font = new Font("Vladimir Script", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Usuario_Text.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Usuario_Text.Location = new Point(289, 80);
             Usuario_Text.Name = "Usuario_Text";
-            Usuario_Text.Size = new Size(310, 50);
+            Usuario_Text.Size = new Size(310, 47);
             Usuario_Text.TabIndex = 2;
             Usuario_Text.TextChanged += Usuario_Text_TextChanged;
             // 
             // Senha_Text
             // 
             Senha_Text.BackColor = Color.FromArgb(228, 30, 24);
-            Senha_Text.Font = new Font("Vladimir Script", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Senha_Text.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Senha_Text.Location = new Point(289, 174);
             Senha_Text.Name = "Senha_Text";
-            Senha_Text.Size = new Size(310, 50);
+            Senha_Text.Size = new Size(310, 47);
             Senha_Text.TabIndex = 3;
+            Senha_Text.UseSystemPasswordChar = true;
             Senha_Text.TextChanged += Senha_Text_TextChanged;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(228, 30, 24);
-            button1.Font = new Font("Vladimir Script", 26F, FontStyle.Bold);
+            button1.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold);
             button1.Location = new Point(326, 273);
             button1.Name = "button1";
             button1.Size = new Size(234, 61);
             button1.TabIndex = 4;
             button1.Text = "Cadastrar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // TelaCadastro
             // 

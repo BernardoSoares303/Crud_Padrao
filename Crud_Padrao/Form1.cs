@@ -16,12 +16,19 @@ namespace Crud_Padrao
 
         private void Login_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            TelaLogin tl = new TelaLogin();
+            tl.Show();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

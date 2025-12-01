@@ -39,7 +39,7 @@
             // Cadastro
             // 
             Cadastro.BackColor = Color.FromArgb(228, 30, 24);
-            Cadastro.Font = new Font("Vladimir Script", 26F, FontStyle.Bold);
+            Cadastro.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Cadastro.Location = new Point(273, 114);
             Cadastro.Name = "Cadastro";
             Cadastro.Size = new Size(236, 82);
@@ -51,7 +51,7 @@
             // Login
             // 
             Login.BackColor = Color.FromArgb(228, 30, 24);
-            Login.Font = new Font("Vladimir Script", 26F, FontStyle.Bold);
+            Login.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold);
             Login.Location = new Point(273, 250);
             Login.Name = "Login";
             Login.Size = new Size(236, 82);
@@ -93,6 +93,7 @@
             Name = "Form1";
             Text = "Tela Inicial";
             FormClosing += Form1_FormClosing;
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
