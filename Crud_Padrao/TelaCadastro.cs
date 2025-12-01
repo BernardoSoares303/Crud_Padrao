@@ -38,15 +38,11 @@ namespace Crud_Padrao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+
+            if (inserirdados(usuario, senhacrip))
             {
-                inserirdados(usuario, senhacrip);
-                MessageBox.Show("Cadastro Realizado Com Sucesso");
+                MessageBox.Show("Cadastro Realizado Com sucesso!");
                 this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro: {ex.Message}");
             }
         }
 
@@ -73,7 +69,7 @@ namespace Crud_Padrao
             }
         }
 
-        static void inserirdados(string usuario, string senha)
+        static bool inserirdados(string usuario, string senha)
         {
             try
             {
@@ -89,11 +85,14 @@ namespace Crud_Padrao
 
                     cmd.ExecuteNonQuery();
                     conn.Close();
+
+                    return true;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro: {ex.Message}");
+                return false;
             }
 
         }
