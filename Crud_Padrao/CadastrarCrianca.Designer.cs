@@ -181,6 +181,7 @@
             Cadastrar_Crianca.TabIndex = 11;
             Cadastrar_Crianca.Text = "Cadastrar Crinça";
             Cadastrar_Crianca.UseVisualStyleBackColor = false;
+            Cadastrar_Crianca.Click += Cadastrar_Crianca_Click;
             // 
             // Generos
             // 

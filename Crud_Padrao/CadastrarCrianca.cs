@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Crud_Padrao
 {
     public partial class CadastrarCrianca : Form
     {
+
+        static string conexao = "Server=127.0.0.1;Port=3307;Database=Natal;Uid=root;Pwd='' ;"; // trocar a porta de 3307 para 3306 no senai
         Crianca c1 = new Crianca();
         string idade;
+
         public CadastrarCrianca()
         {
             InitializeComponent();
@@ -63,6 +67,47 @@ namespace Crud_Padrao
         {
             if (Bomzinho_True.Checked)
                 c1.bomzinho = false;
+        }
+
+        private void Cadastrar_Crianca_Click(object sender, EventArgs e)
+        {
+            c1.idade = int.Parse(idade);
+            if (cadastrar_crianca(c1))
+            {
+                MessageBox.Show("Criança Cadastrad Com Sucesso!");
+                this.Close();
+            }
+        }
+
+        private static bool cadastrar_crianca(Crianca c1)
+        {
+            try
+            {
+                using(MySqlConnection con = new MySqlConnection(conexao))
+                {
+                        con.Open();
+
+                        string query = @"insert into crianca (nome, idade, genero, bomzinho) values (@nome, @idade, @genero, @bomzinho) ;";
+
+                        MySqlCommand cmd = new MySqlCommand(query, con);
+
+                        cmd.Parameters.AddWithValue("@nome", c1.nome);
+                        cmd.Parameters.AddWithValue("@idade", c1.idade);
+                        cmd.Parameters.AddWithValue("@genero", c1.genero);
+                        cmd.Parameters.AddWithValue("@bomzinho", c1.bomzinho);
+
+                        cmd.ExecuteNonQuery();
+
+                        con.Close();
+                    return true;
+                }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show($"Erro: {ex.Message}");
+                return false;
+            }
+
         }
     }
 }
