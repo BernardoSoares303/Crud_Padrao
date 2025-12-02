@@ -14,7 +14,7 @@ namespace Crud_Padrao
     public partial class CadastrarCrianca : Form
     {
 
-        static string conexao = "Server=127.0.0.1;Port=3307;Database=Natal;Uid=root;Pwd='' ;"; // trocar a porta de 3307 para 3306 no senai
+        static string conexao = "Server=127.0.0.1;Port=3306;Database=Natal;Uid=root;Pwd='' ;"; // trocar a porta de 3307 para 3306 no senai
         Crianca c1 = new Crianca();
         string idade;
 

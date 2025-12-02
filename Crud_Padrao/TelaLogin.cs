@@ -20,7 +20,7 @@ namespace Crud_Padrao
         static Form1 f1 = new Form1();
         int voltar = 1;
 
-        static string conexao = "Server=127.0.0.1;Port=3307;Database=Natal;Uid=root;Pwd='' ;"; // trocar a porta de 3307 para 3306 no senai
+        static string conexao = "Server=127.0.0.1;Port=3306;Database=Natal;Uid=root;Pwd='' ;"; // trocar a porta de 3307 para 3306 no senai
 
         TelaPrincipal principal = new TelaPrincipal();
 
