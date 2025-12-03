@@ -65,7 +65,7 @@ namespace Crud_Padrao
 
         private void Bomzinho_False_CheckedChanged(object sender, EventArgs e)
         {
-            if (Bomzinho_True.Checked)
+            if (Bomzinho_False.Checked)
                 c1.bomzinho = false;
         }
 
@@ -74,7 +74,7 @@ namespace Crud_Padrao
             c1.idade = int.Parse(idade);
             if (cadastrar_crianca(c1))
             {
-                MessageBox.Show("Criança Cadastrad Com Sucesso!");
+                MessageBox.Show("Criança Cadastrada Com Sucesso!");
                 this.Close();
             }
         }

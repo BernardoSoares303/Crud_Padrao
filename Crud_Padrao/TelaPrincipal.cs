@@ -36,12 +36,16 @@ namespace Crud_Padrao
 
         private void Editar_Crianca_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            EditarCrianca ec = new EditarCrianca();
+            ec.Show();
         }
 
         private void Ver_Crianca_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ExibirCrianca exibirCrianca = new ExibirCrianca(); 
+            exibirCrianca.Show();
         }
     }
 }
