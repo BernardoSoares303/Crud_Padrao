@@ -53,5 +53,24 @@ namespace Crud_Padrao
             TelaPrincipal principal = new TelaPrincipal();
             principal.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+                return;
+
+            //currentrow vai pegar a linha selecionada
+            DataRowView rowView = (DataRowView)dataGridView1.CurrentRow.DataBoundItem;
+                                                                                     
+            DataRow row = rowView.Row;
+
+            // primeiro excluímos do datatable
+            row.Delete();
+
+            // salvamos a nova tabela [que já tem a linha excluída]
+            adapter.Update(tabela);
+
+            MessageBox.Show("Registro excluído com sucesso!");
+        }
     }
 }

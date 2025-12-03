@@ -31,6 +31,7 @@
             dataGridView1 = new DataGridView();
             pictureBox1 = new PictureBox();
             label1 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -44,7 +45,7 @@
             dataGridView1.Location = new Point(0, 181);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(624, 387);
+            dataGridView1.Size = new Size(537, 387);
             dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
@@ -61,11 +62,23 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Vladimir Script", 56F, FontStyle.Bold);
-            label1.Location = new Point(12, 50);
+            label1.Location = new Point(12, 18);
             label1.Name = "label1";
             label1.Size = new Size(588, 90);
             label1.TabIndex = 2;
             label1.Text = "Lista Dos Bomzinho";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(228, 30, 24);
+            button1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            button1.Location = new Point(209, 121);
+            button1.Name = "button1";
+            button1.Size = new Size(150, 34);
+            button1.TabIndex = 3;
+            button1.Text = "Excluir";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // ExibirCrianca
             // 
@@ -73,6 +86,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(7, 146, 52);
             ClientSize = new Size(1032, 565);
+            Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
@@ -91,5 +105,6 @@
         private DataGridView dataGridView1;
         private PictureBox pictureBox1;
         private Label label1;
+        private Button button1;
     }
 }
